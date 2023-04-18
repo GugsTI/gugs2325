@@ -100,8 +100,6 @@ function limpardados (){
       
     </div>
   </div>
-  import './assets/main.css'
-
 </form>
 
 
