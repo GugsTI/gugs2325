@@ -127,7 +127,7 @@ function limpardados (){
 <style scoped>
 
 div{
-  background-color: rgb(182, 182, 248);
+  background-color: rgba(132, 205, 240, 0.918);
 }
 
 </style>
