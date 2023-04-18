@@ -107,18 +107,18 @@ function limpardados (){
 <button class="form-control form-control-lg" @click="limpardados"> limpar dados</button>
 
 <div class="form-control" v-if = "botaoDados" >
-<h4>dados usuario</h4>
-    <p>email digitado: {{ email }}</p>
-<p>nome digitado:{{ nome }}</p>
-<p>data de nascimento digitado:{{ dataN }}</p>
-<p>endereço digitado:{{ endereço }}</p>
-<p>cidade digitado:{{ cidade }}</p>
-<p>estado digitado:{{ estado }}</p>
+<h4 class="form-control forms-control-lg" >Dados usuário</h4>
+    <p>Email digitado: {{ email }}</p>
+<p>Nome digitado:{{ nome }}</p>
+<p>Data de nascimento digitado:{{ dataN }}</p>
+<p>Endereço digitado:{{ endereço }}</p>
+<p>Cidade digitado:{{ cidade }}</p>
+<p>Estado digitado:{{ estado }}</p>
 <p>Hobbies digitado:{{ Hobbies }}</p>
 <p>Linguagens digitado:{{ Linguagens }}</p>
-<p>biografia digitado:{{ Biografia }}</p>
-<p>senha digitado:{{ senha }}</p>
-<p>confirmaçao digitado:{{ confirmaçao }}</p>
+<p>Biografia digitado:{{ Biografia }}</p>
+<p>Senha digitado:{{ senha }}</p>
+<p>Confirmaçao digitado:{{ confirmaçao }}</p>
 </div>
 
 </template>
@@ -126,7 +126,7 @@ function limpardados (){
 <style scoped>
 
 div{
-  background-color: rgba(18, 255, 255, 0.918);
+  background-color: rgba(188, 253, 253, 0.918);
 }
 
 </style>
