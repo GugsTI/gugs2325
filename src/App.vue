@@ -55,7 +55,7 @@ function limpardados (){
      <input type="text" v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-control"
           placeholder="Insira seu estado">
 
-     <select v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-select mt-3">
+     <select v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-select mt-3" placeholder="Estado:">
      <option>AC</option>
      <option>AL</option>
      <option>AP</option>
@@ -126,7 +126,7 @@ function limpardados (){
 <style scoped>
 
 div{
-  background-color: rgba(228, 241, 107, 0.918);
+  background-color: rgba(18, 255, 255, 0.918);
 }
 
 </style>
