@@ -12,6 +12,9 @@ const estado = ref('')
 const senha = ref('')
 const confirmaçao = ref('')
 const botaoDados = ref('')
+const numeroCartao = ref('')
+const cvv = ref('')
+
 function limpardados (){
   email.value = ""
   nome.value = ""
@@ -20,6 +23,8 @@ function limpardados (){
   cidade.value = ""
   estado.value = ""
   senha.value = ""
+  numeroCartao.value = ""
+  cvv.value = ""
   confirmaçao.value = ""
   botaoDados.value = false
 }
@@ -49,6 +54,12 @@ function limpardados (){
 
      <input type="text" v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-control"
           placeholder="Insira seu estado">
+
+          <input type="text" v-bind:value="numeroCartao" v-on:input="event => numeroCartao = event.target.value" class="form-control"
+          placeholder="Insira o número do cartão de crédito">
+
+          <input type="text" v-bind:value="cvv" v-on:input="event => cvv = event.target.value" class="form-control"
+          placeholder="Insira o cvv do seu cartão">
 
      <select v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-select mt-3" placeholder="Estado:">
      <option>AC</option>
@@ -86,6 +97,8 @@ function limpardados (){
     <div class="col">
       <input type="password" v-bind:value="senha" v-on:input="event => senha = event.target.value" class="form-control" placeholder="Insira sua senha" name="pswd">
       <input type="password" v-bind:value="confirmaçao" v-on:input="event => confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
+            <input type="password" v-bind:value="confirmaçao" v-on:input="event => confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
+
 
       
     </div>
@@ -104,6 +117,8 @@ function limpardados (){
 <p>Endereço digitado:{{ endereço }}</p>
 <p>Cidade digitado:{{ cidade }}</p>
 <p>Estado digitado:{{ estado }}</p>
+<p>Número cartão: {{ numeroCartao }}</p>
+<p>CVV do cartão: {{ cvv }}</p>
 <p>Senha digitado:{{ senha }}</p>
 <p>Confirmaçao digitado:{{ confirmaçao }}</p>
 </div>
@@ -112,9 +127,6 @@ function limpardados (){
 
 <style scoped>
 
-div{
-  background-color: rgba(188, 253, 253, 0.918);
-}
 
 </style>
 
