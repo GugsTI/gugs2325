@@ -38,7 +38,7 @@ function limpardados (){
 <template class="cor">
  
   <form>
-  <div class="row">
+  <div class="forms">
     <div class="col">
       <input type="text" v-bind:value="email" v-on:input="event => email = event.target.value" class="form-control"
           placeholder="Enter email" name="email ">
@@ -60,6 +60,11 @@ function limpardados (){
 
           <input type="text" v-bind:value="cvv" v-on:input="event => cvv = event.target.value" class="form-control"
           placeholder="Insira o cvv do seu cartão">
+          
+          
+          <div class="select">
+          <h6 class="title">INSIRA O UF DO ESTADO ABAIXO:</h6>
+
 
      <select v-bind:value="estado" v-on:input="event => estado = event.target.value" class="form-select mt-3" placeholder="Estado:">
      <option>AC</option>
@@ -91,6 +96,7 @@ function limpardados (){
      <option>SE</option>
      <option>TO</option>
    </select>
+          </div>
    
 
     </div>
@@ -105,12 +111,13 @@ function limpardados (){
   </div>
 </form>
 
+<div class="bt1">
+<button class="btn btn-danger" v-on:click="botaoDados = true ">mostrar dados do usuario</button>
+<button class="btn btn-success" @click="limpardados"> limpar dados</button>
+</div>
 
-<button class="form-control form-control-lg" v-on:click="botaoDados = true ">mostrar dados do usuario</button>
-<button class="form-control form-control-lg" @click="limpardados"> limpar dados</button>
-
-<div class="form-control" v-if = "botaoDados" >
-<h4 class="form-control forms-control-lg" >Dados usuário</h4>
+<div class="forms2" v-if = "botaoDados" >
+<h4 class="title2" >Dados usuário</h4>
     <p>Email digitado: {{ email }}</p>
 <p>Nome digitado:{{ nome }}</p>
 <p>Data de nascimento digitado:{{ dataN }}</p>
@@ -126,6 +133,72 @@ function limpardados (){
 </template>
 
 <style scoped>
+.bt1 {
+    margin-left: 60%;
+    margin-top: 10%;
+    align-content: center;
+}
+
+.bt2 {
+    margin-left: 5%;
+    margin-top: -6.5%;
+    align-content: center;
+}
+
+.forms {
+    background-color: blue;
+    width: 45vw;
+    min-height: 90vh;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 20%;
+    margin-left: 3%;
+
+}
+.forms2{
+  background-color: blue;
+    width: 45vw;
+    min-height: 90vh;
+    border-radius: 20px;
+    padding: 40px;
+    color: aliceblue;
+    margin-top: -55%;
+    margin-left: 50%;
+}
+.dadosUsu {
+    width: 30%;
+    height: 30px;
+    font-size: 10px;
+    margin-left: 50%;
+    margin-top: 15%;
+
+}
+
+.dadosUsu1 {
+    width: 30%;
+    height: 30px;
+    font-size: 10px;
+    margin-left: -70%;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 35%;
+}
+
+.title {
+    text-decoration-color: azure;
+}
+
+.select {
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+
+}
 
 
 </style>
