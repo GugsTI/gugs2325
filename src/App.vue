@@ -28,13 +28,25 @@ function limpardados (){
   confirmaçao.value = ""
   botaoDados.value = false
 }
-//const dados =  email  nome dataN endereço cidade estado senha confirmaçao numeroCartao  cvv
+const senhas = senha.value && confirmaçao.value
 function validacao(){
-  if (email.value == ""){
-    alert(`Alguns campos estão vazios!`)
+  if (email.value == "" || nome.value == "" || dataN.value == ""||  endereço.value == ""|| cidade.value == ""|| estado.value == ""|| numeroCartao.value == ""||cvv.value == ""   ){
+    alert(`Existe campos vazio!`)
   }
   else{
-    alert(`confirmado`)
+    alert(`Confirmando...`)
+  }
+if(senha.value == "" && confirmaçao.value == ""){
+alert(`preencha o campo "SENHA"`)
+}
+else{
+alert(`confirmando senha...`)
+}
+  if (confirmaçao.value == senha.value ){
+    alert(`Confirmado!`)
+  }
+  else{
+    alert(`As senhas não coincidem.`)
   }
 }
  
@@ -111,6 +123,10 @@ function validacao(){
    
 
     </div>
+    <br>
+    <div class="select">
+      <h6 class="title">COLOQUE E CONFIRME SUA SENHA ABAIXO:</h6>
+    </div>
     <div class="col">
       <input type="password" v-bind:value="senha" v-on:input="event => senha = event.target.value" class="form-control" placeholder="Insira sua senha" name="pswd">
       <input type="password" v-bind:value="confirmaçao" v-on:input="event => confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
@@ -131,15 +147,15 @@ function validacao(){
 <div class="forms2" v-if = "botaoDados" >
 <h4 class="title2" >Dados usuário</h4>
     <p>Email digitado: {{ email }}</p>
-<p>Nome digitado:{{ nome }}</p>
-<p>Data de nascimento digitado:{{ dataN }}</p>
-<p>Endereço digitado:{{ endereço }}</p>
-<p>Cidade digitado:{{ cidade }}</p>
-<p>Estado digitado:{{ estado }}</p>
+<p>Nome digitado: {{ nome }}</p>
+<p>Data de nascimento digitado: {{ dataN }}</p>
+<p>Endereço digitado: {{ endereço }}</p>
+<p>Cidade digitado: {{ cidade }}</p>
+<p>Estado digitado: {{ estado }}</p>
 <p>Número cartão: {{ numeroCartao }}</p>
 <p>CVV do cartão: {{ cvv }}</p>
-<p>Senha digitado:{{ senha }}</p>
-<p>Confirmaçao digitado:{{ confirmaçao }}</p>
+<p>Senha digitado: {{ senha }}</p>
+<p>Confirmaçao digitado: {{ confirmaçao }}</p>
 <div class="bt3">
   <button class="btn btn-success" v-on:click="validacao">Confirmação</button>
 </div>
@@ -157,7 +173,7 @@ function validacao(){
 
 .bt2 {
   margin-left:28.5%;
-    margin-top: -2.2%;
+    margin-top: -2.4%;
     align-content: center;
 
 }
@@ -170,7 +186,7 @@ function validacao(){
 .forms {
     background-color: blue;
     width: 45vw;
-    min-height: 70vh;
+    min-height: 95vh;
     border-radius: 20px;
     padding: 40px;
     margin-top: 0.5%;
@@ -180,11 +196,11 @@ function validacao(){
 .forms2{
   background-color: blue;
     width: 45vw;
-    min-height: 70vh;
+    min-height: 95vh;
     border-radius: 20px;
     padding: 40px;
     color: aliceblue;
-    margin-top: -32.3%;
+    margin-top: -42.3%;
     margin-left: 50%;
 }
 .dadosUsu {
@@ -213,7 +229,9 @@ function validacao(){
 
 .title {
     text-decoration-color: azure;
+
 }
+
 
 .select {
     align-items: center;
