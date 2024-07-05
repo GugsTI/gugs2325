@@ -28,6 +28,16 @@ function limpardados (){
   confirmaçao.value = ""
   botaoDados.value = false
 }
+//const dados =  email  nome dataN endereço cidade estado senha confirmaçao numeroCartao  cvv
+function validacao(){
+  if (email.value == ""){
+    alert(`Alguns campos estão vazios!`)
+  }
+  else{
+    alert(`confirmado`)
+  }
+}
+ 
 
 
 
@@ -63,6 +73,7 @@ function limpardados (){
           
           
           <div class="select">
+            <br>
           <h6 class="title">INSIRA O UF DO ESTADO ABAIXO:</h6>
 
 
@@ -103,7 +114,6 @@ function limpardados (){
     <div class="col">
       <input type="password" v-bind:value="senha" v-on:input="event => senha = event.target.value" class="form-control" placeholder="Insira sua senha" name="pswd">
       <input type="password" v-bind:value="confirmaçao" v-on:input="event => confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
-            <input type="password" v-bind:value="confirmaçao" v-on:input="event => confirmaçao = event.target.value" class="form-control" placeholder="confirmaçao de senha" name="pswd">
 
 
       
@@ -113,6 +123,8 @@ function limpardados (){
 
 <div class="bt1">
 <button class="btn btn-danger" v-on:click="botaoDados = true ">mostrar dados do usuario</button>
+</div>
+<div class="bt2">
 <button class="btn btn-success" @click="limpardados"> limpar dados</button>
 </div>
 
@@ -128,41 +140,51 @@ function limpardados (){
 <p>CVV do cartão: {{ cvv }}</p>
 <p>Senha digitado:{{ senha }}</p>
 <p>Confirmaçao digitado:{{ confirmaçao }}</p>
+<div class="bt3">
+  <button class="btn btn-success" v-on:click="validacao">Confirmação</button>
+</div>
 </div>
 
 </template>
 
 <style scoped>
 .bt1 {
-    margin-left: 60%;
-    margin-top: 10%;
+    margin-left:12.5%;
+    margin-top: -5%;
     align-content: center;
+
 }
 
 .bt2 {
-    margin-left: 5%;
-    margin-top: -6.5%;
+  margin-left:28.5%;
+    margin-top: -2.2%;
+    align-content: center;
+
+}
+.bt3{
+  margin-left:12.5%;
+    margin-top: 10%;
     align-content: center;
 }
 
 .forms {
     background-color: blue;
     width: 45vw;
-    min-height: 90vh;
+    min-height: 70vh;
     border-radius: 20px;
     padding: 40px;
-    margin-top: 20%;
+    margin-top: 0.5%;
     margin-left: 3%;
 
 }
 .forms2{
   background-color: blue;
     width: 45vw;
-    min-height: 90vh;
+    min-height: 70vh;
     border-radius: 20px;
     padding: 40px;
     color: aliceblue;
-    margin-top: -55%;
+    margin-top: -32.3%;
     margin-left: 50%;
 }
 .dadosUsu {
